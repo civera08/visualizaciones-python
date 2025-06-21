@@ -1,0 +1,106 @@
+{
+  "name": "Gaming Shop Theme",
+  "dataColors": [
+    "#FF00A8",
+    "#00CFFF",
+    "#2D006B",
+    "#FF33CC",
+    "#000000",
+    "#7F00FF"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#000000",
+  "tableAccent": "#FF00A8",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "titleText": [
+          {
+            "fontColor": "#FF00A8",
+            "fontSize": 16,
+            "textAlignment": "Center"
+          }
+        ],
+        "labels": [
+          {
+            "fontColor": "#000000",
+            "fontSize": 12
+          }
+        ],
+        "header": [
+          {
+            "fontColor": "#00CFFF",
+            "backgroundColor": "#EAEAEA",
+            "fontSize": 13
+          }
+        ],
+        "background": [
+          {
+            "color": "#FFFFFF",
+            "transparency": 0
+          }
+        ]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [
+          {
+            "fontColor": "#FF33CC",
+            "fontSize": 14
+          }
+        ],
+        "categoryLabels": [
+          {
+            "fontColor": "#2D006B",
+            "fontSize": 12
+          }
+        ]
+      }
+    },
+    "slicer": {
+      "*": {
+        "fontColor": "#000000",
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#F5F5F5"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "outlineColor": "#FF00A8",
+        "outlineWeight": 2,
+        "selectionColor": "#00CFFF"
+      }
+    },
+    "multiRowCard": {
+      "*": {
+        "labels": [
+          {
+            "fontColor": "#2D006B",
+            "fontSize": 13
+          }
+        ]
+      }
+    },
+    "table": {
+      "*": {
+        "grid": [
+          {
+            "gridVerticalColor": "#E0E0E0",
+            "gridHorizontalColor": "#E0E0E0"
+          }
+        ],
+        "total": [
+          {
+            "fontColor": "#FF00A8",
+            "backgroundColor": "#EAEAEA"
+          }
+        ]
+      }
+    }
+  }
+}

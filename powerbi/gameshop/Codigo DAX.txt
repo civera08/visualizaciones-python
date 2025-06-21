@@ -1,0 +1,30 @@
+Calendario =                          -- Crea una tabla llamada "Calendario"
+ADDCOLUMNS(                           -- Agrega columnas adicionales a una tabla base
+    CALENDAR(                         -- Genera una tabla con una sola columna de fechas continuas
+        MIN(Venta[Fecha]),            -- Fecha inicial: la más antigua en la tabla Venta
+        DATE(YEAR(MAX(Venta[Fecha])), 12, 31)  
+                                       -- Fecha final: 31 de diciembre del año más reciente en la tabla Venta
+    ),
+    "MN", MONTH([Date]),              -- Agrega columna "MN" con el número de mes (1 a 12)
+    "Mes", FORMAT([Date], "mmmm"),    -- Agrega columna "Mes" con el nombre del mes (enero, febrero, etc.)
+    "Año", YEAR([Date]),              -- Agrega columna "Año" con el año de la fecha
+    "Día", DAY([Date]),               -- Agrega columna "Día" con el día del mes (1 a 31)
+    "Semana", WEEKNUM([Date], 2)      -- Agrega columna "Semana" con el número de semana (modo 2 = semana inicia lunes)
+)
+
+
+01. Unidades Vendidas = SUM(Venta[Cantidad Vendida])
+02. Venta Dolares = SUM(Venta[Venta Dolares])
+03. Venta Dolares (SUMX) = SUMX(Venta,Venta[Cantidad Vendida]*Venta[Precio])
+04. Cuota = SUM(Cuota[Cuota])
+05. Alcance de Cuota = DIVIDE([01. Unidades Vendidas],[04.Cuota])
+06. Venta Dolar Nintendo = CALCULATE([02. Venta Dolares],Productos[Marca]="Nintendo")
+07. Venta Dol. No-Online Asia = CALCULATE([02. Venta Dolares],Venta[Región]="ASIA",Venta[Canal]<>"ONLINE")
+08. MTD Unidades = TOTALMTD([01. Unidades Vendidas],Calendario[Date])
+09. YTD Unidades = TOTALYTD([01. Unidades Vendidas],Calendario[Date])
+10. Unidades Año Pasado = CALCULATE([01. Unidades Vendidas],DATEADD(Calendario[Date],-1,YEAR))
+11. YTD Año Pasado = TOTALYTD([10. Unidades Año Pasado],Calendario[Date])
+12. VAR U vs Año Pasado = DIVIDE([09. YTD Unidades]-[11. YTD Año Pasado],[11. YTD Año Pasado])
+13. Alcance Cuota SWITCH 2 = CALCULATE([05. Alcance de Cuota],Productos[Consola]="Switch 2")
+14. Estado = IF([05. Alcance de Cuota]>0.9,"BIEN","REVISAR")
+

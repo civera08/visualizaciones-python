@@ -1,0 +1,17 @@
+calendario = 
+ADDCOLUMNS (
+    CALENDAR (DATE(2023,1,1), DATE(2024,12,31)),
+    "Year", YEAR([Date]),
+    "Month Number", MONTH([Date]),
+    "Month Name", FORMAT([Date], "MMMM"),
+    "Month Short", FORMAT([Date], "MMM"),
+    "Quarter", "Q" & FORMAT([Date], "Q"),
+    "Year-Month", FORMAT([Date], "YYYY-MM"),
+    "Weekday", WEEKDAY([Date], 2),  -- lunes = 1
+    "Day Name", FORMAT([Date], "DDDD")
+)
+
+01. Precio Promedio = AVERAGE(Ventas[Precio unitario])
+02. Total Productos = SUM(ventas[Cantidad])
+03. Total Venta = SUMX(ventas, ventas[Cantidad] * ventas[Precio Unitario])
+04. Ventas por Vendedor = CALCULATE(SUMX(ventas, ventas[Cantidad] * ventas[Precio Unitario]), ALLEXCEPT(ventas, ventas[Vendedor]))
