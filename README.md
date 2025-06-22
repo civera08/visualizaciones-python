@@ -44,7 +44,7 @@ Archivos disponibles en la carpeta [`/python`](./python)
 
 César Rivera  
 🔗 [LinkedIn](https://linkedin.com/in/civera08)  
-✉️ tu.email@ejemplo.com  
+✉️ civera.ds@outlook.com  
 🌐 [Mi sitio web](https://sites.google.com/view/civera-ds)
 
 ---
