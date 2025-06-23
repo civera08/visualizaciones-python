@@ -20,15 +20,15 @@ Archivos disponibles en la carpeta [`/python`](./python)
 
 > Estos dashboards están embebidos y publicados desde Power BI Service a mi sitio web personal.
 
-### 1. Reporte de Ventas por Región
+### 1. Reporte de Ventas Por Región
 
-🔗 [Ver dashboard en mi sitio](https://sites.google.com/view/civera-ds/dashboards/actividades)  
-📷 ![Dashboard Actividades](./powerbi/actividades.png)
+🔗 [Ver dashboard en mi sitio](https://sites.google.com/view/civera-ds/display)  
+📷 ![Dashboard Actividades](./powerbi/Por_Region.png)
 
 ### 2. Reporte de Ventas de Consolas
 
-🔗 [Ver dashboard en mi sitio](https://sites.google.com/view/civera-ds/)  
-📷 ![Dashboard Almacén](./powerbi/almacen.png)
+🔗 [Ver dashboard en mi sitio](https://sites.google.com/view/civera-ds/display)  
+📷 ![Dashboard Almacén](./powerbi/Portada_GameShop.png)
 
 ---
 
