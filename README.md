@@ -23,7 +23,7 @@ Archivos disponibles en la carpeta [`/python`](./python)
 ### 1. Reporte de Ventas Por Región
 
 🔗 [Ver dashboard en mi sitio](https://sites.google.com/view/civera-ds/display)  
-📷 ![Dashboard PorRegion](./powerbi/por_region/Por_Region.png)
+📷 ![Dashboard PorRegion](./powerbi/por_region/PorRegion.png)
 
 ### 2. Reporte de Ventas de Consolas
 
